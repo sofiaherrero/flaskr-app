@@ -119,4 +119,4 @@ def delete(id):
 @bp.route('/<int:id>', methods=('GET',))
 def show_post(id):
     post = get_post(id, check_author=False)
-    return render_template('blog/view.html', post=post)
+    return render_template('blog/show_post.html', post=post)

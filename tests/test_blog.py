@@ -99,3 +99,12 @@ def test_delete(client, auth, app):
         db = get_db()
         post = db.execute('SELECT * FROM post WHERE id = 1').fetchone()
         assert post is None
+
+
+def test_show_post(client, auth):
+    """ Test that showing a post returns a 200 response without log in and with log in
+    The get_post functionality is tested in other tests."""
+    assert client.get('/1').status_code == 200
+
+    auth.login()
+    assert client.get('/1').status_code == 200
