@@ -29,7 +29,7 @@ Instead of installing and running it, you can create an image and run it in a Do
 
 and run it with:
 
-``` docker run -p 5000:5000 flaskr-app ```
+``` $ docker run -p 5000:5000 flaskr-app ```
 
 then open <http://localhost:5000> in a browser
 
