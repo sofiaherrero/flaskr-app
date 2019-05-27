@@ -1,37 +1,38 @@
 ## Flaskr with custom additions
 Flaskr blog app from the the [Flask tutorial](http://flask.pocoo.org/docs/1.0/tutorial/) with custom additions.
 
-### Install
+### Install and run
 
 Create a virtualenv and activate it:
 
     $ python3 -m venv venv
     $ . venv/bin/activate
 
-Or on Windows cmd:
-
-    $ py -3 -m venv venv
-    $ venv\Scripts\activate.bat
-
 Install Flaskr (run this command from inside the directory flaskr-app where the setup.py file is):
 
     $ pip install -e .
 
-## Run
+Then:
 
     $ export FLASK_APP=flaskr
     $ export FLASK_ENV=development
     $ flask init-db
     $ flask run
 
-Or on Windows cmd:
+and open <http://127.0.0.1:5000> in a browser.
 
-    > set FLASK_APP=flaskr
-    > set FLASK_ENV=development
-    > flask init-db
-    > flask run
+### Using Docker
 
-Open <http://127.0.0.1:5000> in a browser.
+Instead of installing and running it, you can create an image and run it in a Docker container using the Dockerfile. Create the image with:
+
+``` $ docker build -t flaskr-app . ```
+
+and run it with:
+
+``` docker run -p 5000:5000 flaskr-app ```
+
+then open <http://localhost:5000> in a browser
+
 
 ## Test
 
