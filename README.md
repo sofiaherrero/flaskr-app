@@ -19,7 +19,7 @@ Install Flaskr (run this command from inside the directory flaskr-app where the 
 
 ## Run
 
-    $ p
+    $ export FLASK_APP=flaskr
     $ export FLASK_ENV=development
     $ flask init-db
     $ flask run
